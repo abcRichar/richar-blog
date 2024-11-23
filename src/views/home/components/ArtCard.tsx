@@ -1,21 +1,43 @@
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { useNavigate } from "react-router-dom";
 
-export default function ArtCard() {
+type itemType = {
+  name: string;
+  tags: Array<string>;
+  time: string;
+  id: number;
+};
+
+interface ArtType {
+  item: itemType;
+}
+
+export default function ArtCard({ item }: ArtType) {
+  let navigate = useNavigate();
   return (
-    <section className="flex cursor-pointer">
-      <div className="w-[20%]">
+    <section
+      className="flex cursor-pointer w-[60%] mb-[50px]"
+      onClick={() => navigate("/art-details/123")}
+    >
+      <div className="w-[240px] h-auto overflow-hidden">
         <img
-          src="https://blog-demo.wisp.blog/_next/image?url=https%3A%2F%2Fimagedelivery.net%2FlLmNeOP7HXG0OqaG97wimw%2Fclvlugru90000o4g8ahxp069s%2F7f6f52d6-cdd5-4b8d-9f7e-1be06e031028.png%2Fpublic&w=1920&q=75"
+          className="hover:scale-125 transition-all"
+          src="https://images.microcms-assets.io/assets/52150c67242449149a479d53abca5582/e39e0792e286499d91757e7c810923e4/nubelson-fernandes-iE71-TMrrkE-unsplash.jpg?fm=webp&w=414"
           alt=""
         />
       </div>
-      <div className="ml-4">
-        <p className="text-2xl font-bold py-2">前端如何实现文件的在线预览</p>
-        <div className="flex items-center mb-2 text-[#333333]">
-          <div className=" px-2 py-1 bg-[#f3f3f3] text-xs rounded-[5px] flex items-center justify-center mr-2">#Vue</div>
-          <div className=" px-2 py-1 bg-[#f3f3f3] text-xs rounded-[5px] flex items-center justify-center mr-2">#JavaScript</div>
+      <div className="ml-5 flex-1">
+        <p className="text-2xl font-bold py-2 mb-2">{item.name}</p>
+        <div className="flex items-center mb-4 text-[#333333]">
+          {item.tags.map((tag: string) => (
+            <div
+              key={tag}
+              className="px-2 py-1 bg-[#f3f3f3] text-base rounded-[5px] flex items-center justify-center mr-2"
+            >
+              {tag}
+            </div>
+          ))}
         </div>
-        <p className="text-base text-[#333333]">2024·01·12</p>
+        <p className="text-base text-[#333333]">{item.time}</p>
       </div>
     </section>
   );

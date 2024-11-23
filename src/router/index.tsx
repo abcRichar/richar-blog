@@ -4,6 +4,7 @@ import Layout from "../layout/index";
 import Home from "../views/home";
 import Blogs from "../views/blogs";
 import About from "../views/about";
+import ArtDetails from "@/views/art-details";
 import NotFound from "../views/error/403";
 const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <About />,
+      },
+      {
+        path: "/art-details/:id",
+        element: <ArtDetails />,
       },
     ],
   },

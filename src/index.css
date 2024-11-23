@@ -2,8 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "MyCustomFont"; /* 钉钉进步体  */
+  src: url("@/assets/font/DingTalk-JinBuTi.woff2") format("woff2"),
+    /* 优先使用 woff2 格式 */ url("@/assets/font/DingTalk-JinBuTi.woff")
+      format("woff"),
+    /* 其次使用 woff 格式 */ url("@/assets/font/DingTalk-JinBuTi.ttf")
+      format("truetype"); /* 最后使用 ttf 格式 */
+  font-weight: normal; /* 字体粗细 */
+  font-style: normal; /* 字体样式 */
+}
 :root {
-  font-family: JetBrains Mono;
+  font-family: MyCustomFont;
   line-height: 1.5;
   font-weight: 400;
   font-synthesis: none;
