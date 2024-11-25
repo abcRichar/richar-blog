@@ -1,8 +1,6 @@
 import ArtCard from "./components/ArtCard";
 import ReTypewriter from "@/components/ReTypewriter";
 export default function Home() {
-  const list = [];
-
   return (
     <>
       <div className="flex items-center justify-center h-[30vh]">
