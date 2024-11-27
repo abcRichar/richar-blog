@@ -8,7 +8,7 @@ export default function ArtDetails() {
 
   return (
     <>
-      <div className="w-[60%] mx-auto">
+      <div className="w-[80%] mx-auto">
         <button
           onClick={() => {
             navigate("/");

@@ -1,5 +1,7 @@
 import ArtCard from "./components/ArtCard";
 import ReTypewriter from "@/components/ReTypewriter";
+import { Button } from "antd";
+
 export default function Home() {
   return (
     <>
@@ -7,9 +9,7 @@ export default function Home() {
         <ReTypewriter text={["<i>First</i> sentence.", "Welecom to web."]} />
       </div>
       <div className="mt-10 flex flex-col items-center">
-        <ArtCard
-          item={{ id: 1, name: "Vue和React区别", tags: ["vue"], time: "2023" }}
-        />
+        <ArtCard item={{ id: 1, name: "Vue和React区别", tags: ["vue"], time: "2023" }} />
         <ArtCard
           item={{
             id: 2,
@@ -18,9 +18,7 @@ export default function Home() {
             time: "2023",
           }}
         />
-        <ArtCard
-          item={{ id: 3, name: "什么事敏捷开发", tags: ["vue"], time: "2023" }}
-        />
+        <ArtCard item={{ id: 3, name: "什么事敏捷开发", tags: ["vue"], time: "2023" }} />
         <ArtCard
           item={{
             id: 4,
