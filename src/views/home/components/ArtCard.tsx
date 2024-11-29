@@ -5,6 +5,7 @@ type itemType = {
   tags: Array<string>;
   time: string;
   id: number;
+  path?: string;
 };
 
 interface ArtType {
@@ -14,7 +15,10 @@ interface ArtType {
 export default function ArtCard({ item }: ArtType) {
   let navigate = useNavigate();
   return (
-    <section className="flex cursor-pointer w-[80%] mb-[50px]" onClick={() => navigate("/art-details/123")}>
+    <section
+      className="flex cursor-pointer w-[80%] mb-[50px]"
+      onClick={() => navigate("/art-details/" + item.path)}
+    >
       <div className="w-[240px] h-auto overflow-hidden">
         <img
           className="hover:scale-125 transition-all"
@@ -26,7 +30,10 @@ export default function ArtCard({ item }: ArtType) {
         <p className="text-2xl font-bold py-2 mb-2">{item.name}</p>
         <div className="flex items-center mb-4 text-[#333333]">
           {item.tags.map((tag: string) => (
-            <div key={tag} className="px-2 py-1 bg-[#f3f3f3] text-base rounded-[5px] flex items-center justify-center mr-2">
+            <div
+              key={tag}
+              className="px-2 py-1 bg-[#f3f3f3] text-base rounded-[5px] flex items-center justify-center mr-2"
+            >
               {tag}
             </div>
           ))}
