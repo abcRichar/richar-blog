@@ -17,6 +17,14 @@ export default function ArtDetails() {
 
   // TODO: 打包后无法获取到打包后的地址
 
+  function NotArt() {
+    return (
+      <>
+        <div className="text-center text-2xl py-[100px]">文章不存在</div>
+      </>
+    );
+  }
+
   return (
     <>
       <div className="w-[80%] mx-auto">
@@ -31,9 +39,10 @@ export default function ArtDetails() {
         >
           返回
         </Button>
-        <div className="mt-2">
+        {curItem ? <MarkdownRenderer mdFilePath={curItem} /> : <NotArt />}
+        {/* <div className="mt-2">
           <MarkdownRenderer mdFilePath={curItem} />
-        </div>
+        </div> */}
       </div>
     </>
   );
