@@ -47,19 +47,25 @@ const NavItem = ({
 export default function LayHeader() {
   return (
     <div className="lay-header px-4 h-[50px] flex items-center justify-between">
-      <div>
+      <div className="flex items-center gap-2">
+        <img
+          src="https://avatars.githubusercontent.com/u/96232441?v=4"
+          className="w-[25px] h-[25px]"
+          alt=""
+        />
         <Link to="/" className="font-bold text-[20px]">
           Richar.dev
         </Link>
       </div>
-      <div className="sm:w-[300px] flex items-center justify-between">
+      <div className="sm:w-[250px] flex items-center justify-between">
         <NavItem to="/">主页</NavItem>
         <NavItem to="/blogs">笔记</NavItem>
         <NavItem to="/about">关于</NavItem>
         <NavItem to="https://github.com/abcRichar">GitHub</NavItem>
-        <div>
+        <div></div>
+        {/* <div>
           <ThemeSwitch />
-        </div>
+        </div> */}
       </div>
     </div>
   );
