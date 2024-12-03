@@ -17,7 +17,7 @@ export default function ArtCard({ item }: ArtType) {
   return (
     <section
       className="flex cursor-pointer w-[80%] mb-[50px]"
-      onClick={() => navigate("/blogs/art-details/" + item.path)}
+      onClick={() => navigate("/art-details/" + item.path)}
     >
       <div className="w-[240px] h-auto overflow-hidden">
         <img
