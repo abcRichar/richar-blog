@@ -4,7 +4,7 @@ import { ArrowLeftOutlined } from "@ant-design/icons";
 import MarkdownRenderer from "./components/preview-md";
 // import indexMd from "@/md/index.md";
 const modulesRoutes = import.meta.glob("/src/md/**/*.md");
-console.log(modulesRoutes);
+console.log(modulesRoutes,'modulesRoutes');
 
 export default function ArtDetails() {
   let navigate = useNavigate();
