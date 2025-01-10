@@ -12,7 +12,7 @@
   font-weight: normal; /* 字体粗细 */
   font-style: normal; /* 字体样式 */
 }
-:root {
+:root[class="dark"] {
   font-family: MyCustomFont;
   line-height: 1.5;
   font-weight: 400;
@@ -20,4 +20,22 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #111014;
+
+  --hedare-bg: #111014;
+  --card-bg:#1d1e22;
+  --active-text-color:#fff;
+  --no-active-text-color:#b3b3b3;
+}
+
+:root[class="light"] {
+  font-family: MyCustomFont;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f3f3f3;
+
 }
