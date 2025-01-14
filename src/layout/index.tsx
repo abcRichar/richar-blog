@@ -3,11 +3,11 @@ import LayHeader from "./lay-header";
 import LayFooter from "./lay-footer";
 export default function Layout() {
   return (
-    <div className="max-w-[1200px] min-h-lvh m-auto ">
+    <div className="min-h-lvh m-auto ">
       <div>
         <LayHeader></LayHeader>
       </div>
-      <div className="p-4">
+      <div className="my-4 mx-4" style={{ padding: "0 calc((100% - 1400px + 3rem) / 2)" }}>
         <Outlet />
       </div>
       <div>

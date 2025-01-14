@@ -5,7 +5,7 @@ export default function HeaderItem({ to, children }: { to: string; children: Rea
   const isExternal = to.startsWith("http"); // 判断是否为外部链接
   // 提取公共的 className 逻辑
   const getNavLinkClass = ({ isActive, isPending }: { isActive: boolean; isPending: boolean }) => {
-    let classes = "text-base text-[#09090b99] hover:text-[#3a3a3c] dark:text-[#b3b3b3]";
+    let classes = "menu-txt";
     if (isPending) {
       classes += " pending dark:text-[#b3b3b3]";
     }
@@ -15,7 +15,7 @@ export default function HeaderItem({ to, children }: { to: string; children: Rea
     return classes;
   };
   return isExternal ? (
-    <a href={to} className="text-base text-[#09090b99] dark:text-[#b3b3b3] hover:text-[#3a3a3c] " target="_blank" rel="noopener noreferrer">
+    <a href={to} className="menu-txt" target="_blank" rel="noopener noreferrer">
       {children}
     </a>
   ) : (

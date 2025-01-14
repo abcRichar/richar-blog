@@ -1,28 +1,21 @@
 import { AlignJustify } from "lucide-react";
 import { Drawer, DrawerClose, DrawerContent, DrawerDescription, DrawerFooter, DrawerHeader, DrawerTitle, DrawerTrigger } from "@/components/ui/drawer";
+import { ModeToggle } from "@/components/mode-toggle";
+
 export default function HeaderMini() {
   return (
     <div>
       <Drawer>
         <DrawerTrigger>
-          <AlignJustify className="h-[1.2rem] w-[1.2rem] cursor-pointer dark:text-[#fff]" />
+          <AlignJustify className="h-[1.5rem] w-[1.5rem] cursor-pointer dark:text-[#fff]" />
         </DrawerTrigger>
-        <DrawerContent className="bg-[#fff] dark:bg-[#1f1f1f]">
+        <DrawerContent className="bg-[#fff] dark:bg-[#1f1f1f] p-2">
           <div>
-            <p className="text-primary">首页</p>
-            <p>文章</p>
-            <p>关于</p>
+            <p className="menu-txt py-2">首页</p>
+            <p className="menu-txt py-2">文章</p>
+            <p className="menu-txt py-2">关于</p>
+            <ModeToggle />
           </div>
-          {/* <DrawerHeader>
-            <DrawerTitle>Are you absolutely sure?</DrawerTitle>
-            <DrawerDescription>This action cannot be undone.</DrawerDescription>
-          </DrawerHeader> */}
-          {/* <DrawerFooter>
-            <Button>Submit</Button>
-            <DrawerClose>
-              <Button variant="outline">Cancel</Button>
-            </DrawerClose>
-          </DrawerFooter> */}
         </DrawerContent>
       </Drawer>
     </div>

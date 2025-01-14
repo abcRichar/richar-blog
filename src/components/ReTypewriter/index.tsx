@@ -17,8 +17,8 @@ export default function ReTypewriter({ text }: any) {
   }, []);
   return (
     <>
-      <div>
-        <span ref={el} className="text-[4vw]"></span>
+      <div className="w-[100%] h-[100%] rounded-[10px] flex items-center justify-center card-box ">
+        <span ref={el} className="text-[4vw] text-[#101010] dark:text-[#fff]"></span>
       </div>
     </>
   );

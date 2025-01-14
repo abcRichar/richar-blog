@@ -25,7 +25,7 @@
   --hedare-bg: #111014;
   --card-bg:#1d1e22;
   --active-text-color:#fff;
-  --no-active-text-color:#b3b3b3;
+  --no-active-text-color:#f6f8fa;
 }
 
 :root[class="light"] {
@@ -38,4 +38,20 @@
   -moz-osx-font-smoothing: grayscale;
   background-color: #f3f3f3;
 
+}
+
+
+
+/* 菜单文字 */
+.menu-txt {
+  @apply text-base text-[#575757] dark:text-[#b3b3b3] hover:text-[#3a3a3c] dark:hover:text-[#fff] font-semibold cursor-pointer;
+}
+
+/* 盒子 */
+.card-box {
+  @apply bg-white dark:bg-[#1f1f1f] border border-[#e3e8f7]  shadow-md dark:border-[#b3b3a5] transition duration-300 ease-in-out  hover:border-[#455cf0] rounded-[10px] overflow-hidden;
+}
+
+.card-br-box{
+  @apply border border-[#e3e8f7]  shadow-md dark:border-[#b3b3a5] transition duration-300 ease-in-out  hover:border-[#455cf0] rounded-[10px] overflow-hidden
 }
