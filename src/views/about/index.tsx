@@ -1,7 +1,11 @@
-export default function About() {
+import "./index.scss";
+
+function About() {
   return (
     <>
-      <h1>About</h1>
+      <div>about</div>
     </>
   );
 }
+
+export default About;

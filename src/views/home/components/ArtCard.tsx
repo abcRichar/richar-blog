@@ -15,7 +15,10 @@ interface ArtType {
 export default function ArtCard({ item }: ArtType) {
   let navigate = useNavigate();
   return (
-    <section className="cursor-pointer w-[100%]  card-box" onClick={() => navigate("/art-details/" + item.path)}>
+    <section
+      className="cursor-pointer w-[100%] card-box"
+      onClick={() => navigate("/art-details/" + item.path)}
+    >
       <div className="w-[100%] h-[230px] overflow-hidden">
         <img
           className="hover:scale-125 transition-all w-full"
@@ -24,15 +27,22 @@ export default function ArtCard({ item }: ArtType) {
         />
       </div>
       <div className="p-4 flex-1">
-        <p className="text-2xl font-bold py-2 mb-2">{item.name}</p>
-        <div className="flex items-center mb-4 text-[#333333]">
+        <p className="text-2xl font-bold py-2 mb-2 dark:text-[#f3f3f3]">
+          {item.name}
+        </p>
+        <div className="flex items-center mb-4 text-[#333333] ">
           {item.tags.map((tag: string) => (
-            <div key={tag} className="px-2 py-1 bg-[#f3f3f3] text-base rounded-[5px] flex items-center justify-center mr-2">
+            <div
+              key={tag}
+              className="px-2 py-1 bg-[#f3f3f3] text-base rounded-[5px] flex items-center justify-center mr-2"
+            >
               #{tag}
             </div>
           ))}
         </div>
-        <p className="text-base text-[#333333]">{item.time}</p>
+        <p className="text-base text-[#333333] dark:text-[#f3f3f3]">
+          {item.time}
+        </p>
       </div>
     </section>
   );

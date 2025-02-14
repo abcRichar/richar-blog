@@ -12,6 +12,18 @@
   font-weight: normal; /* 字体粗细 */
   font-style: normal; /* 字体样式 */
 }
+
+:root {
+  transition: background 0.3s;
+  --purple-hsl: 205, 60%, 60%;
+  --overlay-blurple: hsla(var(--purple-hsl), 0.4);
+  background: linear-gradient(215deg, var(--overlay-blurple), transparent 40%),
+    radial-gradient(var(--overlay-blurple), transparent 40%) no-repeat -60vw -40vh /
+      105vw 200vh,
+    radial-gradient(var(--overlay-blurple), transparent 65%) no-repeat 50%
+      calc(100% + 20rem) / 60rem 30rem;
+}
+
 :root[class="dark"] {
   font-family: MyCustomFont;
   line-height: 1.5;
@@ -23,9 +35,9 @@
   background-color: #111014;
 
   --hedare-bg: #111014;
-  --card-bg:#1d1e22;
-  --active-text-color:#fff;
-  --no-active-text-color:#f6f8fa;
+  --card-bg: #1d1e22;
+  --active-text-color: #fff;
+  --no-active-text-color: #f6f8fa;
 }
 
 :root[class="light"] {
@@ -37,10 +49,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #f3f3f3;
-
 }
-
-
 
 /* 菜单文字 */
 .menu-txt {
@@ -49,9 +58,10 @@
 
 /* 盒子 */
 .card-box {
-  @apply bg-white dark:bg-[#1f1f1f] border border-[#e3e8f7]  shadow-md dark:border-[#b3b3a5] transition duration-300 ease-in-out  hover:border-[#455cf0] rounded-[10px] overflow-hidden;
+  @apply bg-white dark:bg-[#1f1f1f] border border-[#e3e8f7]  shadow-md dark:border-[#b3b3a5] dark:hover:border-[#fff] transition duration-300 ease-in-out  hover:border-[#455cf0] rounded-[10px] overflow-hidden;
 }
 
-.card-br-box{
-  @apply border border-[#e3e8f7]  shadow-md dark:border-[#b3b3a5] transition duration-300 ease-in-out  hover:border-[#455cf0] rounded-[10px] overflow-hidden
+/* 盒子边框 */
+.card-br-box {
+  @apply border border-[#e3e8f7]  shadow-md dark:border-[#b3b3a5] transition duration-300 ease-in-out  hover:border-[#455cf0] rounded-[10px] overflow-hidden;
 }

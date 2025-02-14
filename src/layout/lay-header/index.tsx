@@ -7,7 +7,10 @@ import HeaderItem from "./components/header-item";
 
 export default function LayHeader() {
   return (
-    <div style={{ padding: "0 calc((100% - 1400px + 3rem) / 2)" }} className="bg-white dark:bg-[#1f1f1f]">
+    <div
+      style={{ padding: "0 calc((100% - 1400px + 3rem) / 2)" }}
+      className="bg-white dark:bg-[#1f1f1f] delay-[300]"
+    >
       <div className="lay-header  h-[50px] flex items-center justify-between mx-4">
         <div>
           <Link to="/" className="font-bold text-[20px] dark:text-white ">

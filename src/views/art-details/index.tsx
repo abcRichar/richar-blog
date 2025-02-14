@@ -4,7 +4,7 @@ import { ArrowLeftOutlined } from "@ant-design/icons";
 import MarkdownRenderer from "./components/preview-md";
 // import indexMd from "@/md/index.md";
 const modulesRoutes = import.meta.glob("/src/md/**/*.md");
-console.log(modulesRoutes,'modulesRoutes');
+console.log(modulesRoutes, "modulesRoutes");
 
 export default function ArtDetails() {
   let navigate = useNavigate();
@@ -27,7 +27,7 @@ export default function ArtDetails() {
 
   return (
     <>
-      <div className="w-[80%] mx-auto">
+      <div className=" mx-auto bg-white p-2 card-br-box">
         <Button
           color="default"
           variant="solid"
