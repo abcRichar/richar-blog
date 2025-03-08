@@ -1,6 +1,6 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./index.scss";
-import ThemeSwitch from "../components/theme-switch";
+// import ThemeSwitch from "../components/theme-switch";
 import HeaderMini from "./components/header-mini";
 import { ModeToggle } from "@/components/mode-toggle";
 import HeaderItem from "./components/header-item";
@@ -19,7 +19,9 @@ export default function LayHeader() {
         </div>
         <div className="  items-center justify-between gap-10 md:flex hidden">
           <HeaderItem to="/">主页</HeaderItem>
-          <HeaderItem to="/blogs">笔记</HeaderItem>
+          <HeaderItem to="/blogs">文章</HeaderItem>
+          <HeaderItem to="/blogs">随笔</HeaderItem>
+          <HeaderItem to="/blogs">项目Demo</HeaderItem>
           <HeaderItem to="/about">关于</HeaderItem>
           <HeaderItem to="https://github.com/abcRichar">GitHub</HeaderItem>
           <ModeToggle />

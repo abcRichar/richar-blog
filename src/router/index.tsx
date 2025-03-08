@@ -5,6 +5,7 @@ import Home from "../views/home";
 import Blogs from "../views/blogs";
 import About from "../views/about";
 import ArtDetails from "@/views/art-details";
+// import BlogDetails from "@/views/blog-details";
 import NotFound from "../views/error/403";
 const router = createBrowserRouter([
   {

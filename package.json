@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@ant-design/icons": "^5.5.1",
+    "@bytemd/plugin-gfm": "^1.22.0",
+    "@bytemd/react": "^1.22.0",
     "@radix-ui/react-dialog": "^1.1.4",
     "@radix-ui/react-dropdown-menu": "^2.1.4",
     "@radix-ui/react-slot": "^1.1.0",

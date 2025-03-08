@@ -5,23 +5,36 @@ import rehypeHighlight from "rehype-highlight";
 import remarkGfm from "remark-gfm";
 import { Terminal } from "lucide-react";
 import CopyButton from "../CopyButton";
-import MarkNav from "markdown-navbar";
+// import MarkNav from "markdown-navbar";
 import "./index.css";
+/** 高亮代码 */
 import "highlight.js/styles/atom-one-dark.css";
 // import "markdown-navbar/dist/navbar.css";
 import "./navbar.css";
 
-const MarkdownRenderer = ({ mdFilePath }: any) => {
+const MarkdownRenderer = ({ mdContent }: any) => {
   const [content, setContent] = useState("");
 
   useEffect(() => {
-    const fetchMarkdownFile = async () => {
-      const response = await fetch(mdFilePath);
-      const text = await response.text();
-      setContent(text);
-    };
-    fetchMarkdownFile();
-  }, [mdFilePath]);
+    // const fetchMarkdownFile = async () => {
+    //   const response = await fetch(mdFilePath);
+    //   const text = await response.text();
+    //   setContent(text);
+    // };
+    // fetchMarkdownFile();
+    // import(/* @vite-ignore */ "../../../../assets/md/" + mdFilePath + ".md")
+    //   .then(async (e) => {
+    //     console.log(e.default, "cccc");
+    //     const response = await fetch(e.default);
+    //     const text = await response.text();
+    //     setContent(text);
+    //   })
+    //   .catch((e) => {
+    //     console.log(e);
+    //   });
+
+    setContent(mdContent);
+  }, [mdContent]);
 
   return (
     <>
@@ -41,11 +54,11 @@ const MarkdownRenderer = ({ mdFilePath }: any) => {
                   const id = Math.random().toString(36).substr(2, 9);
                   return (
                     <div className="not-prose rounded-md border">
-                      <div className="flex h-12 items-center justify-between bg-zinc-100 px-4 dark:bg-zinc-900">
+                      <div className="flex h-12 items-center justify-between bg-zinc-100 px-4 ">
                         <div className="flex items-center gap-2">
                           <Terminal size={18} />
                           <p
-                            className="text-sm text-zinc-600 dark:text-zinc-400"
+                            className="text-sm text-zinc-600 "
                             style={{ marginBottom: 0 }}
                           >
                             {node?.data?.meta}
@@ -65,7 +78,7 @@ const MarkdownRenderer = ({ mdFilePath }: any) => {
                     <div className="p-4">
                       <code
                         {...props}
-                        className="not-prose rounded bg-gray-100 px-1 dark:bg-zinc-900 "
+                        className="not-prose rounded bg-gray-100 px-1 "
                       >
                         {children}
                       </code>
@@ -78,7 +91,7 @@ const MarkdownRenderer = ({ mdFilePath }: any) => {
             {content}
           </ReactMarkdown>
         </div>
-        <div className="w-[20%] h-full sticky top-0 border-solid border-[1px] p-2 rounded-[5px]">
+        {/* <div className="w-[20%] h-full sticky top-0 border-solid border-[1px] p-2 rounded-[5px]">
           目录
           <MarkNav
             className="article"
@@ -87,7 +100,7 @@ const MarkdownRenderer = ({ mdFilePath }: any) => {
             ordered={false}
             declarative={false}
           />
-        </div>
+        </div> */}
       </div>
     </>
   );

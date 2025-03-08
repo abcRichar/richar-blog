@@ -20,7 +20,7 @@ const CopyButton = ({ id }: { id: string }) => {
   return (
     <button
       onClick={onCopy}
-      className="inline-flex rounded-md p-2 hover:bg-zinc-200 dark:hover:bg-zinc-800"
+      className="inline-flex rounded-md p-2 hover:bg-zinc-200 "
     >
       <Copy
         size={16}

@@ -2,7 +2,16 @@ import path from "path";
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 
+// await build({
+//   build: {
+//     rollupOptions: {
+//       assetsInclude: "**/*.md",
+//     },
+//   },
+// });
+
 export default defineConfig({
+  assetsInclude: ["**/*.md"],
   css: {
     preprocessorOptions: {
       scss: {
@@ -16,5 +25,4 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  assetsInclude: ["**/*.md"],
 });
