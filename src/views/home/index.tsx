@@ -1,12 +1,14 @@
 import ArtCard from "./components/ArtCard";
 import ReTypewriter from "@/components/ReTypewriter";
 import { Github } from "lucide-react";
+import { motion } from "motion/react";
+
 export default function Home() {
   return (
     <>
-      <div className="flex items-center justify-center h-[30vh] ">
+      <motion.div className="flex items-center justify-center h-[30vh] ">
         <ReTypewriter text={["<i>First</i> sentence.", "Welecom to web."]} />
-      </div>
+      </motion.div>
       <div className="grid grid-cols-4 gap-4 mt-4">
         <div className="grid grid-cols-2 gap-4 col-span-3">
           <ArtCard
