@@ -39,6 +39,7 @@ export default function ArtDetails() {
       setMdContent(text);
     }
     getM();
+    window.scrollTo(0, 0);
   }, [modulesRoutes[`${curItem}`]]);
 
   function NotArt() {

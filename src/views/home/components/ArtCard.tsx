@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 
 type itemType = {
-  name: string;
+  title: string;
   tags: Array<string>;
   time: string;
   id: number;
@@ -26,9 +26,9 @@ export default function ArtCard({ item }: ArtType) {
           alt=""
         />
       </div>
-      <div className="p-4 flex-1">
+      <div className="p-4 flex-1 min-h-[160px]">
         <p className="text-2xl font-bold py-2 mb-2 dark:text-[#f3f3f3]">
-          {item.name}
+          {item.title}
         </p>
         <div className="flex items-center mb-4 text-[#333333] ">
           {item.tags.map((tag: string) => (
