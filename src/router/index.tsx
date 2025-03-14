@@ -5,6 +5,7 @@ import Home from "../views/home";
 import Blogs from "../views/blogs";
 import About from "../views/about";
 import ArtDetails from "@/views/art-details";
+import Pigeonhole from "@/views/pigeonhole";
 // import BlogDetails from "@/views/blog-details";
 import NotFound from "../views/error/403";
 const router = createBrowserRouter([
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: "/art-details/:id",
         element: <ArtDetails />,
+      },
+      {
+        path: "/pigeonhole",
+        element: <Pigeonhole />,
       },
     ],
   },
