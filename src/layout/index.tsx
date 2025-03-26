@@ -3,7 +3,7 @@ import LayHeader from "./lay-header";
 import LayFooter from "./lay-footer";
 export default function Layout() {
   return (
-    <div className="min-h-lvh m-auto pt-[50px]">
+    <div className="min-h-lvh m-auto relative ">
       <div>
         <LayHeader></LayHeader>
       </div>
