@@ -1,40 +1,40 @@
 {
-  "blogList":[
+  "blogList": [
     {
-      "id":1,
-      "title":"创建一个React项目",
-      "tags":["react"],
-      "time":"2025-03-01",
-      "path":"创建一个React项目",
-      "isIndex":"1",
-      "cover":"https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3040633871"
+      "id": 1,
+      "title": "创建一个React项目",
+      "tags": ["react"],
+      "time": "2025-03-01",
+      "path": "创建一个React项目",
+      "isIndex": "1",
+      "cover": "https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3040633871"
     },
     {
-      "id":2,
-      "title":"React中的useEffect",
-      "tags":["react"],
-      "time":"2025-03-01",
-      "path":"React中的useEffect",
-      "isIndex":"1",
-      "cover":"https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3040633871"
+      "id": 2,
+      "title": "React中的useEffect",
+      "tags": ["react"],
+      "time": "2025-03-01",
+      "path": "React中的useEffect",
+      "isIndex": "1",
+      "cover": "https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3040633871"
     },
     {
-      "id":3,
-      "title":"声明式和命令式编程",
-      "tags":["javaScript"],
-      "time":"2025-03-01",
-      "path":"声明式和命令式编程",
-      "isIndex":"1",
-      "cover":"https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3040633871"
+      "id": 3,
+      "title": "声明式和命令式编程",
+      "tags": ["javaScript"],
+      "time": "2025-03-01",
+      "path": "声明式和命令式编程",
+      "isIndex": "1",
+      "cover": "https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3040633871"
     },
     {
-      "id":4,
-      "title":"Git提交规定约定",
-      "tags":["Git"],
-      "time":"2025-03-01",
-      "path":"Git提交规定约定",
-      "isIndex":"1",
-      "cover":"https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3040633871"
+      "id": 4,
+      "title": "Git提交规定约定",
+      "tags": ["Git"],
+      "time": "2025-03-01",
+      "path": "Git提交规定约定",
+      "isIndex": "1",
+      "cover": "https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3040633871"
     }
   ]
 }

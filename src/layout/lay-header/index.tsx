@@ -28,10 +28,7 @@ export default function LayHeader() {
   }, [handleScroll]);
 
   return (
-    <div
-      ref={headerRef}
-      className={`bg-white dark:bg-[#1f1f1f] delay-[300] w-full top-0 z-10 padding-container transition-all duration-300 ease-in-out ${isFixed ? "fixed translate-y-0" : "-translate-y-full"}`}
-    >
+    <div ref={headerRef} className={`bg-white dark:bg-[#1f1f1f] delay-[300] w-full top-0 z-10 padding-container transition-all duration-300 ease-in-out`}>
       <div className="lay-header h-[50px] flex items-center justify-between mx-4">
         <div>
           <Link to="/" className="font-bold text-[20px] dark:text-white">
