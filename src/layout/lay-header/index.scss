@@ -4,3 +4,11 @@
 .active{
   color: var(--active-text-color) !important;
 }
+.padding-container {
+  padding: 0 calc((100% - 1400px + 3rem) / 2);
+}
+
+.fixed {
+  position: fixed;
+  transform: translateY(0);
+}
