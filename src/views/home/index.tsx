@@ -1,5 +1,6 @@
 import ArtCard from "./components/ArtCard";
 import ReTypewriter from "@/components/ReTypewriter";
+import MyTitle from "@/components/MyTitle";
 import { Github } from "lucide-react";
 import { motion } from "motion/react";
 import BlogData from "@/data/blog-data.json";
@@ -13,7 +14,8 @@ export default function Home() {
   return (
     <>
       <motion.div className="flex items-center justify-center h-[30vh] " initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.175 }}>
-        <ReTypewriter text={["<i>First</i> sentence.", "Welecom to web."]} />
+        {/* <ReTypewriter text={["<i>First</i> sentence.", "Welecom to web."]} /> */}
+        <MyTitle />
       </motion.div>
       <div className="grid grid-cols-4 gap-4 mt-4">
         <motion.div initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.175 }} className="grid grid-cols-2 gap-4 col-span-3 max-md:col-span-4">
